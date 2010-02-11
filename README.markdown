@@ -79,6 +79,13 @@ method to our `app/app_controller.php`:
         return $this->Authority->allowed($this->Auth->user('role'));
     }
 
+Note that for this specific example, we are passing the `role` value for the currently logged in
+user to `AuthorityComponent::allowed()`. In this case, `role` is a string that identifies which group the user
+belongs to, and the Authority component will return a boolean indicating whether or not that group
+has access to the current controller/action. The use of `$this->Auth->user('role')` is, in the end,
+arbitrary - you could feed anything you wanted to `AuthorityComponent::allowed()` as long as it is a
+string.
+
 You can, of course, add in any additional logic that you may require in the `isAuthorized()` method.
 Moreover, you are also able to override the method in subclasses (optionally calling
 `parent::isAuthorized()`) to provide more fine-grained authorization control at the controller level.
