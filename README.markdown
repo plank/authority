@@ -16,11 +16,6 @@ one included with CakePHP are the following:
  - All permissions are group-based.
  - This component is designed to be used in tandem with the Auth component.
 
-The component has two modes of operation which can be used exclusively, or in
-tandem. The first mode is the automatic mode, whereby the current request is
-inspected and the current controller & action are compared against the 'slug'
-field in the Auth.User.Group session value.
-
 An example Authority configuration, which would be placed in `app/config/authority.php`:
 
     <?php
