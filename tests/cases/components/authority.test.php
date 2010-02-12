@@ -1,4 +1,11 @@
 <?php
+/**
+ * Authority: Simple static ACLs for the rest of us.
+ *
+ * @copyright     Copyright 2010, Plank Design (http://plankdesign.com)
+ * @license       http://opensource.org/licenses/mit-license.php The MIT License
+ */
+
 App::import('Component', array('Authority.Authority', 'Session'));
 App::import('Core', 'AppController');
 
